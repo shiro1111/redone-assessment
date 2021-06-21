@@ -1,0 +1,32 @@
+<div class="body">
+    <div class="form-section">
+
+        <div class="form-content">
+            <div class="icon">
+                <h1> <span>Red</span> One</h1>
+            </div>
+            <form [formGroup]="loginForm" autocomplete="off" >
+
+                    <div class="input-container">
+                        <span class="p-float-label" style="display: unset;">
+                            <input id="float-input" type="text" pInputText formControlName="username">
+                            <label for="float-input" class="float-label">USERNAME</label>
+                        </span>
+                    </div>
+                    <div class="input-container">
+                        <span class="p-float-label" style="display: unset; ">
+                            <input id="float-input" type="password" pInputText formControlName="password">
+                            <label for="float-input" class="float-label">PASSWORD</label>
+                        </span>
+                    </div>
+
+                    <p-button class="submit-btn" type="submit" label="LOGIN" (click)="onLogin()"></p-button>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+<p-toast position="bottom-center" key="bc"></p-toast>

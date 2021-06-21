@@ -1,0 +1,14 @@
+<p-card  [header]="data?.title" [subheader]="data?.typeDesc" [style]="{width: '100%'}" styleClass="p-shadow-5 p-card-header">
+    <ng-template pTemplate="header">
+        <div class="img-container" >
+            <img alt="Card" [src]="data?.img" class="img">
+        </div>
+    </ng-template>
+    <label >{{data?.desc}}</label>
+    <ng-template pTemplate="footer" >
+     <div class="p-text-right">
+         <button pButton pRipple type="button" style="font-size: 10px;" icon="pi pi-external-link" (click)="onEditReward()" class="p-button-rounded p-button-text"></button>
+         <button pButton pRipple type="button" icon="pi pi-trash" (click)="onDeleteReward()" class="p-button-rounded p-button-text"></button>
+     </div>
+    </ng-template>
+</p-card>

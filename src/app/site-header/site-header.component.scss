@@ -1,0 +1,117 @@
+@import '../../assets/style/globals.scss';
+
+:host ::ng-deep {
+    .p-menubar {
+        position: fixed;
+        width: 100%;
+        border: none;
+        padding: 0 ;
+        background: none !important;
+        color: white;
+        // background: none !important;
+        z-index: 200;
+        // padding-bottom: 80px;
+    }
+    .p-menubar-welcome {
+        position: fixed;
+        width: 100%;
+        border: none;
+        padding: 15px;
+        // padding: 15px;
+        background: white !important;
+        // background: none !important;
+        z-index: 200;
+        // padding-bottom: 80px;
+    }
+}
+
+.nav-link:hover{
+    cursor: pointer;
+    font-weight: 300;
+}
+.white-color{
+    color: white !important;
+}
+.c-start-container {
+    position: relative;
+    padding: 10px 5vw;
+    font-size: 30px;
+    color:black;
+    .nav-link {
+        font-size: 20px;
+        margin-left: 50px;
+        text-decoration: none;
+    }
+    .title {
+        cursor: pointer;
+        span {
+            font-weight: bolder;
+        }
+    }
+}
+
+
+//new
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+
+    .bar-icon{
+        cursor: pointer;
+        .label{
+        cursor: pointer;
+
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+
+}
+.mobile-link-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 110px;
+    background-color: white;
+    transition:  all 0.4s ease-in;
+    padding-top: 10px;
+    top: -100px;
+    z-index: 998;
+    .nav-link{
+        padding: 10px 5vw;
+        font-size: 20px;
+            margin-left: 50px;
+        margin: 0;
+        }
+}
+.open-mobile-link-container{
+    // height: 150px;
+
+    top:50px;
+    background-color: whitesmoke;
+}
+
+@include screen-tablet{
+    .c-start-container {
+        position: relative;
+        padding: 20px 10vw;
+        font-size: 30px;
+        color:black;
+        .nav-link {
+            font-size: 20px;
+            margin-left: 50px;
+        }
+        .title {
+            cursor: pointer;
+            span {
+                font-weight: bolder;
+            }
+        }
+    }
+}

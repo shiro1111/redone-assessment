@@ -1,0 +1,33 @@
+{
+    "lov": {
+        "rewardType": [
+            {
+                "type": 1,
+                "desc": "Birthday Reward",
+                "img": "assets/image/c-birthdy.png"
+            },
+            {
+                "type": 2,
+                "desc": "Sales Reward",
+                "img": "assets/image/c-sales.png"
+            },
+            {
+                "type": 3,
+                "desc": "Bonus Reward",
+                "img": "assets/image/c-bonus.jpeg"
+            }
+        ]
+    },
+    "user": [
+        {
+            "username": "admin",
+            "password": "password",
+            "token": "jwpToken1"
+        },
+        {
+            "username": "user",
+            "password": "password",
+            "token": "jwpToken2"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+<div class="body g-container">
+    <div class="g-section-module">
+
+        <label class="g-section-title">
+            Rewards
+        </label>
+        <label class="g-section-desc">
+            Where you can manage redOne rewards
+        </label>
+        <div class="p-text-right p-d-flex p-jc-end p-ai-center" (click)="showModalDialog()">
+            <div class="add-reward-btn">
+                <i class="pi pi-plus p-mr-1"></i>
+                <span>Add reward</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="reward-container">
+        <div class="p-grid p-align-stretch vertical-container" *ngIf="(rewardList$  | async)?.length > 0">
+            <div class="p-col-12 p-md-6 p-lg-4 p-p-3" *ngFor="let item of rewardList$  | async">
+                <reward-card [data]="item" (onEdit)="onEdit($event)"></reward-card>
+            </div>
+        </div>
+        <div  class="p-text-center no-rec-container" *ngIf="(rewardList$  | async)?.length <=0">
+            <img src="assets/image/no-record.jpeg" class="no-record-img" alt="" >
+            <div class="no-rec-label">
+                <label for="">You have no reward in the moment</label>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<p-dialog [header]="isFormEdit ? 'Edit Reward' : 'Add Reward'" [(visible)]="displayModal" [modal]="true"
+    [style]="{width: '50vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+    <reward-form *ngIf="displayModal" [data]="rewardDetail" (formData)="formData($event)"></reward-form>
+    <ng-template pTemplate="footer" class="dialog-footer">
+        <p-button (click)="displayModal=false" label="Cancel" styleClass="p-button-text" center></p-button>
+        <button [disabled]="!rewardDetail" (click)="onSubmit()" pButton type="submit"
+            [label]="isFormEdit ?  'Edit' : 'Submit'"></button>
+    </ng-template>
+</p-dialog>

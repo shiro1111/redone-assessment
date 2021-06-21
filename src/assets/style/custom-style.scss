@@ -1,0 +1,72 @@
+@import "mixins";
+
+// g stand for global
+
+//for mobile
+.std-ta-center {
+    text-align: center;
+}
+
+.c-container {
+    padding: 0 5vw;
+}
+
+.g-container {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.g-show-for-desktop {
+    display: none;
+}
+
+.g-show-for-mobile {
+    display: unset;
+}
+
+.container {
+    .section-module {
+        padding: 5px;
+    }
+}
+//for tablet
+@include screen-tablet {
+    .g-show-for-desktop {
+        display: unset;
+    }
+    .g-show-for-mobile {
+        display: none;
+    }
+
+    .g-container {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .g-section-module {
+        padding: 35px 0;
+        text-align: center;
+
+        .g-section-title{
+            display: block;
+            font-size: 44px;
+            font-weight: 600;
+
+        }
+        .g-section-desc{
+            display: block;
+            font-size: 23px;
+            margin-top: 5px;
+            font-weight: 200;
+
+        }
+    }
+}
+
+//for desktop
+@include screen-desktop {
+    .g-container {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}

@@ -1,0 +1,30 @@
+<div class="content" >
+    <form [formGroup]="rewardForm" (ngSubmit)="onSubmit">
+        <div class="p-grid p-pr-5 p-pl-5">
+            <div class="p-col-12 ">
+                <div class="form-input">
+                    <label class="label">Reward type</label>
+                    <p-dropdown class="c-dropdown" [options]="rewardType$ | async " placeholder="Select reward type"
+                      formControlName="type" optionLabel="desc" optionValue="type"></p-dropdown>
+                </div>
+            </div>
+            <div class="p-col-12 ">
+                <div class="form-input">
+                    <label class="label">Reward title</label>
+                    <input formControlName="title" class="c-input" type="text" pInputText />
+                </div>
+            </div>
+            <div class="p-col-12 ">
+                <div class="form-input">
+                    <label class="label">Reward description</label>
+                    <textarea formControlName="desc" rows="5" style="width: 100%;" cols="30" pInputTextarea></textarea>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+</div>

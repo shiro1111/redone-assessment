@@ -1,0 +1,36 @@
+.form-input {
+    min-width: 200px;
+    .label {
+        margin-bottom: 5px;
+        font-size: 17px;
+        display: block;
+    }
+}
+
+.content {
+    min-height: 200px;
+}
+.c-input{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 200;
+}
+.p-inputtextarea{
+    font-weight: 200;
+    font-size: 20px;
+}
+.p-button{
+    margin: 10px;
+}
+:host::ng-deep {
+    .p-dropdown {
+        width: 70% !important;
+    }
+    .p-dropdown .p-dropdown-label {
+        font-size: 20px;
+    }
+    .p-dropdown .p-dropdown-panel {
+    font-size: 20px
+    ;
+    }
+}

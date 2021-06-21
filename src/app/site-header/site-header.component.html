@@ -1,0 +1,14 @@
+<div class="navbar-container c-start-container p-shadow-7" >
+    <div class="p-d-flex">
+        <label class="title" (click)="backToWelcome()"> <span> Red</span> One </label>
+        <div class="g-show-for-desktop">
+            <a routerLink='./home' class="nav-link">Home</a> 
+            <a  routerLink='./reward' class="nav-link">Reward</a> 
+        </div>
+    </div>
+    <div class="bar-icon" (click)="onLogout()" >
+        <i class="pi pi-sign-out"  style="font-size: 1rem">
+        </i>
+        <label class="label">Logout</label>
+    </div>
+</div>
